@@ -3,5 +3,5 @@
 # Then, using that variable, create a message that reveals your favorite number.
 # Print that message.
 fav_number = 7
-msg = "my favorite number is " + fav_number
+msg = "my favorite number is " + str(fav_number)
 print(msg)
