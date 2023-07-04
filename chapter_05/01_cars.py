@@ -1,9 +1,7 @@
 cars = ['audi', 'bmw', 'subaru', 'toyota']
 
-made_in_japan = ['sony', 'subaru', 'toyota', 'suzuki', 'kawasaki']
-
 for car in cars:
-    if car.lower() in made_in_japan:
-        print(f"{car.title()} - made in Japan!")
+    if car == 'bmw':
+        print(car.upper())
     else:
         print(car.title())
