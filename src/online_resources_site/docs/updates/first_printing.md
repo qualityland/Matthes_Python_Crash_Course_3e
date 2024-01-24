@@ -13,20 +13,32 @@ Code that produces warnings but still runs correctly is noted under Errata, as t
 If you find an error in the book that's not listed here, or can’t get something to work, please let me know. You can reach me through email at ehmatthes@gmail.com, or on Twitter at @ehmatthes.
 
 - [Updates](#updates)
+    - [Chapter 16](#chapter-16)
 - [Errata](#errata)
     - [Chapter 6](#chapter-6)
     - [Chapter 9](#chapter-9)
     - [Chapter 10](#chapter-10)
     - [Chapter 15](#chapter-15)
-    - [Chapter 16](#chapter-16)
+    - [Chapter 16](#chapter-16_1)
+    - [Chapter 17](#chapter-17)
     - [Chapter 18](#chapter-18)
     - [Chapter 19](#chapter-19)
 
+---
 
 Updates
 ---
 
-There are no updates to note at this time.
+### Chapter 16
+
+On Windows, the calls to `path.read_text()` should all have an `encoding='utf-8'` argument. On page 330, that would look like this:
+
+```python
+path = Path('weather_data/sitka_weather_07-2021_simple.csv')
+lines = path.read_text(encoding='utf-8').splitlines()
+```
+
+This also affects the calls to `path.read_text()` on pages 339 and 343. There are a few other grayed-out references to `path.read_text()` that should include this argument, but that shouldn't affect the code you're entering. Those are on pages 332, 334, 336, 339, 345, and 348.
 
 ---
 
@@ -75,7 +87,24 @@ plt.style.use('seaborn-v0_8')
 
 As noted above for Chapter 15, use `seaborn-v0_8` wherever you see `seaborn`.
 
+### Chapter 17
+
+On page 370, the code that starts the `for` loop should go through index `30`, not `5`:
+
+```python
+submission_dicts = []
+for submission_id in submission_ids[:30]:
+    # Make a new API call for each submission.
+    ...
+```
+
 ### Chapter 18
+
+On page 391, the path to the index.html template should read:
+
+```text
+learning_log/learning_logs/templates/learning_logs/index.html
+```
 
 On page 399, the listing for *topics.html* has an extra closing tag `</li>`. It should look like this:
 
@@ -89,6 +118,18 @@ On page 399, the listing for *topics.html* has an extra closing tag `</li>`. It 
 ```
 
 ### Chapter 19
+
+On page 416, the sentence 
+
+> Make a new *urls.py* file in the directory *ll_project/accounts/* and add the following...
+
+should instead read:
+
+> Make a new *urls.py* file in the directory *learning_log/accounts/* and add the following...
+
+On page 417 under *The login Template* the path to the `accounts/` directory should be `learning_log/accounts/`, not `ll_project/accounts/`. The full path to the `login.html` template should be: `learning_log/accounts/templates/registration/login.html`.
+
+Also on page 417, the word *Settting* should only have two Ts.
 
 On page 425, in the grayed out code for *models.py*, the `text` attribute should be lowercase:
 
