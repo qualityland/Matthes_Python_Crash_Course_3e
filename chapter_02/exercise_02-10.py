@@ -5,3 +5,5 @@
 fav_number = 7
 msg = "my favorite number is " + str(fav_number)
 print(msg)
+# or
+print(f"my favorite number is {fav_number}")

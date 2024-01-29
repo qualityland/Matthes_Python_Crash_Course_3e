@@ -13,5 +13,5 @@ guests = ['robert plant', 'john bonham', 'jimmy page', 'john paul johnes']
 print(f"Unfortunately {guests[1].title()} cannot make it!")
 
 guests[1] = "ronald shannon jackson"
-for g in guests:
-    print(f"Hi {g.title()}, I'd like to invite you to dinner!")
+for guest in guests:
+    print(f"Hi {guest.title()}, I'd like to invite you to dinner!")

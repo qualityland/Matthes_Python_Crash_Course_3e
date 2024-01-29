@@ -3,4 +3,4 @@
 # Your message should be simple, such as, "Hello Eric, would you like to learn some Python today?""
 
 name = input("your name: ")
-print(f"Hello {name}, would you like to learn some Python today?")
+print(f"Hello {name.title()}, would you like to learn some Python today?")

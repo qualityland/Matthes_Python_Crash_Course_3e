@@ -15,10 +15,6 @@
 
 guests = ['robert plant', 'john bonham', 'jimmy page', 'john paul johnes']
 
-guests.insert(0, "paul mccartney")
-guests.insert(3, 'ringo starr')
-guests.append('john lennon')
-
 print(f"Current list: {guests}")
 print("Sorry, only space for 2 guests!")
 
@@ -26,8 +22,8 @@ while len(guests) > 2:
     removed = guests.pop()
     print(f"Sorry {removed.title()}, I cannot invite you!")
 
-for g in guests:
-    print(f"Hi {g.title()}, I'd like to invite you to dinner!")
+for guest in guests:
+    print(f"Hi {guest.title()}, I'd like to invite you to dinner!")
 
 while len(guests) > 0:
     del guests[0]

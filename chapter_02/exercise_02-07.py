@@ -7,7 +7,7 @@
 # - lstrip()
 # - rstrip()
 # - strip()
-
+print("Note: Begining and end of the string including whitespace are marked with '<' and '>'.")
 name = "     \t        Stefan    \t   \t  \n    "
 print("<" + name + ">")
 print("<" + name.lstrip() + ">")
