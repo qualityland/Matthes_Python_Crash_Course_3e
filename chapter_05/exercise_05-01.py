@@ -13,3 +13,10 @@ print(car == 'audi')
 #   evaluates to True or False.
 # - Create at least 10 tests. Have at least 5 tests evaluate to True and another
 #   5 tests evaluate to False.
+
+family = ['stefan', 'georg', 'marion', 'helga']
+print('Is Helga a family member? I predict True.')
+print('helga' in family)
+
+print('Is Thomas a family member? I predict False.')
+print('thomas' in family)
