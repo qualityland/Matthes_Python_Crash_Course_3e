@@ -20,3 +20,32 @@ print('helga' in family)
 
 print('Is Thomas a family member? I predict False.')
 print('thomas' in family)
+
+l_limit = 18
+u_limit = 65
+
+age = 12
+print(f"Is {age} inside age limits? I predict False.")
+print(l_limit <= age and age <= u_limit)
+
+age = 72
+print(f"Is {age} inside age limits? I predict False.")
+print(l_limit <= age and age <= u_limit)
+
+age = 32
+print(f"Is {age} inside age limits? I predict True.")
+print(l_limit <= age and age <= u_limit)
+
+
+age = 12
+print(f"Is {age} off limits? I predict True.")
+print( age < l_limit or age > u_limit)
+
+age = 72
+print(f"Is {age} off limits? I predict True.")
+print( age < l_limit or age > u_limit)
+
+age = 32
+print(f"Is {age} off limits? I predict False.")
+print( age < l_limit or age > u_limit)
+
